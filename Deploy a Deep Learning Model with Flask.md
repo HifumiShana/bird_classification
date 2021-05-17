@@ -114,6 +114,7 @@ model.save('/content/drive/MyDrive/Project/model_resnet50.hdf5')
 Cấu trúc thư mục:
 - Bird Classification 
   - static
+    - css/style.css
     - img 
   - model.py
   - upload.py
@@ -164,7 +165,7 @@ def predict_class(image):
     # print(class_names[np.argmax(score)])
     return class_names[np.argmax(score)], 100*np.max(score)
 ```
-Sau đó tạo file upload.py
+Sau đó tạo file app.py
 ```python=
 from flask import Flask, render_template, request
 # if you encounter dependency issues using 'pip install flask-uploads'
@@ -242,7 +243,7 @@ Tạo file index.html
 ## Conclusion
 Nhờ flask, nhóm chúng tôi có thể tạo một python web đơn giản cho deep learning model. App này là sự kết hợp của google colab, javascript, html, css và python.
 ### Trước khi Done
-Chạy file upload.py để xem kết quả
+Bật terminal gõ "flask run" để xem kết quả
 ![](https://i.imgur.com/IC05AUO.png)
 ### Hình ảnh được chọn 
 ![](https://i.imgur.com/iAp9ovh.png)
